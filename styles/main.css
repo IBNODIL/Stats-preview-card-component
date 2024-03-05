@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+  width: 100vw;
+  height: 100%;
+}
+
+body{
+  font-family: sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 900px;
+  height: 350px; 
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 10px;
+}
+
+.desktop{
+  width: 400px;
+  height: 100%;
+  background-image: url(../images/image-header-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  visibility: visible;
+  position: relative;
+}
+
+.desktop div{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(277, 73%, 52%, 0.513);
+}
+
+.mobile{
+  width: 0;
+  height: 0px;
+  visibility: hidden;
+  position: absolute;
+}
+
+.text{
+  display: flex;
+  height: 100%;
+  padding: 50px 100px 50px 60px;
+  width: 500px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text h1{
+  font-size: 28px;
+  color: white;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+.purple{
+  color: hsl(277, 64%, 61%);
+}
+
+.text p{
+  font-size: 15px;
+  line-height: 20px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.about{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.about h4{
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.about span{
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 950px) {
+  .container{
+    margin-top: 100px;
+    width: 300px;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .mobile{
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/image-header-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    visibility: visible;
+    position: relative;
+  }
+  
+  .mobile div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: hsla(277, 73%, 52%, 0.513);
+  }
+  
+  .desktop{
+    width: 0;
+    height: 0px;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .text{
+    flex-direction: column;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    min-height: 400px;
+    align-items: center;
+  }
+
+  .text h1{
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .text p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .about{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+}
